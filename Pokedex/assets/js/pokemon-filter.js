@@ -1,11 +1,10 @@
 const inputSearch = document.querySelector('#search')
 const navMenu = document.querySelector("[data-type='nav-menu']")
 
-const details = Array.from(navMenu.querySelectorAll('.name'))
-const lisPokemon = Array.from(navMenu.querySelectorAll('li.pokemon'))
+const lispokemonName = Array.from(navMenu.querySelectorAll('li.pokemonName'))
 
 inputSearch.addEventListener('input', function () {
-  const str = this.value;
+  const str = this.value.trim().toLowerCase();
   if (str) {
     filterData(str)
   } else {
@@ -14,41 +13,21 @@ inputSearch.addEventListener('input', function () {
 })
 
 function showAllItems() {
-  lisPokemon.forEach(li => li.classList.remove('hide'))
-  details.forEach(detail => detail.removeAttribute('open'))
+  lispokemonName.forEach(li => li.classList.remove('hide'))
 }
 
 function filterData(str) {
   showAllItems()
-  lisPokemon.forEach(liPokemon => {
-    const details = liPokemon.querySelector('.name')
+  lispokemonName.forEach(lipokemonName => {
+    const nameElement = lipokemonName.querySelector('.name')
 
-    if(!details) return
+    if(!nameElement) return
 
-    const pokemon = details.querySelector('pokemon')
-
-    if (pokemon && pokemon.textContent.toLowerCase().includes(str.toLowerCase())) {
-      return details.setAttribute('open', '')
-    }
-
-    const lis = details.querySelectorAll('li')
-
-    let found = false
-
-    for (let i = 0; i < lis.length; i++) {
-      let li = lis[i];
-      if (li.textContent.toLowerCase().includes(str.toLowerCase())) {
-          found = true
-          li.classList.remove('hide')
-      } else {
-          li.classList.add('hide')  
-      }
-    }
-
-    if(found){
-      details.setAttribute('open', '')
+    const pokemonName = nameElement.textContent.toLowerCase()
+    if (pokemonName.includes(str)) {
+    liPokemon.classList.remove('hide')
     } else {
-      details.removeAttribute('open')
+    liPokemon.classList.add('hide')
     }
   })
 }

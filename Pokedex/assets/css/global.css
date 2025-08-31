@@ -2,18 +2,15 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
-
 body {
   background-color: #f6f8fc;
 }
-
 .content {
   width: 100vw;
   height: 100vh;
   padding: 1rem;
   background-color: #fff;
 }
-
 .cabecalho {
   display: flex;
   align-items: center;
@@ -22,7 +19,6 @@ body {
   padding: 2rem;
   background-color: #fff;
 }
-
 @media screen and (min-width: 992px) {
   .content {
     max-width: 992px;
@@ -30,7 +26,6 @@ body {
     margin: 1rem auto;
     border-radius: 1rem;
   }
-
   .cabecalho {
     max-width: 992px;
     height: auto;
@@ -38,14 +33,12 @@ body {
     border-radius: 1rem;
   }
 }
-
 .caixa-pesquisa {
   display: flex;
   padding: 10px;
   align-items: center;
   gap: 8px;
 }
-
 .input-pesquisa {
   border-radius: 50px;
   border: 1px solid rgba(0, 0, 0, 0.25);
@@ -53,14 +46,12 @@ body {
   font-size: 16px;
   padding: 10px 50px;
 }
-
 .svg-filter{
   display: flex;
   height: 100px;
   align-items: center; 
   gap: 8px;
 }
-
 .pagination {
   display: flex;
   flex-direction: row;
@@ -69,7 +60,6 @@ body {
   width: 100%;
   padding: 1rem;
 }
-
 .pagination button {
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
@@ -81,7 +71,9 @@ body {
   cursor: pointer;
   transition: background-color 200ms ease;
 }
-
 .pagination button:hover {
   background-color: #8b99ff;
+}
+.hide {
+  display: none;
 }

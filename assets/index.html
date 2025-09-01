@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+ 
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pokedex.css">
+</head>
+ 
+<body>
+    <header class="cabecalho">
+        <img class="logopokedex" src="https://uploads.spiritfanfiction.com/historias/capas/201805/pokemon-adventureinterativa-12930949-060520181259.png"
+        alt="Logo Pokedex">
+ 
+        <div class="caixa-pesquisa">
+            <input class="input-pesquisa" id="search" type="search"  placeholder="Pesquisa" />
+ 
+            <svg class="svg-filter" fill="#000000" height="30px" width="30px" version="1.1" id="Filled_Icons" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                xml:space="preserve">
+                <g id="Filter-Filled">
+                    <path d="M23,2v0.5l-8,10v8l-5,2v-10l-8-10V2H23z"></path>
+                </g>
+            </svg>
+        </div>
+    </header>
+ 
+    <section class="content">
+        <ol data-type="nav-menu" id="pokemonList" class="pokemons">
+            <!-- ..... Pokemons here ..... -->
+        </ol>
+ 
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Load More
+            </button>
+        </div>
+    </section>
+   
+    <!-- Nosso JS -->
+    <script src="assets/js/pokemon-model.js"></script>
+    <script src="assets/js/poke-api.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/pokemon-filter.js"></script>
+</body>
+</html>
